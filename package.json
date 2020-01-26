@@ -10,7 +10,10 @@
     "lint": "eslint ."
   },
   "dependencies": {
+    "i18next": "^19.0.3",
+    "i18next-react-native-language-detector": "^1.0.2",
     "react": "16.9.0",
+    "react-i18next": "^11.3.1",
     "react-native": "0.61.5"
   },
   "devDependencies": {
