@@ -1,29 +1,29 @@
 import i18next from 'i18next';
-import { initReactI18next } from 'react-i18next';
-import i18nextReactNative from 'i18next-react-native-language-detector';
+import { useTranslation } from 'react-i18next';
 
 import { en, pt } from '../localize-keys';
 
-const languageKeys = { en, pt };
 
-const i18nextOptions = {
-  fallbackLng: 'en',
-  ns: 'translation',
-  debug: false,
-  preload: true,
-  languageKeys,
-  initImmediate: false,
-	load: 'languageOnly',
-	interpolation: {
-		escapeValue: false, // not needed for react as it escapes by default
-	}
+const resources = { en, pt };
+
+export const languageDetector = {
+  type: 'languageDetector',
+  async: true,
+  detect: cb => cb('en'),
+  init: () => {},
+  cacheUserLanguage: () => {},
 };
 
-export const initialize = () =>
-	i18next
-	.use(i18nextReactNative)
-	.use(initReactI18next)
-	.init(i18nextOptions);
 
-export const translateKey = (key, interpolation) =>
-  i18next.t(key, interpolation);
+export const i18nextOptions = {
+	fallbackLng: 'en',
+	debug: true,
+	resources,
+	whitelist: Object.keys(resources),
+	nonExplicitWhitelist: true,
+	load: 'languageOnly',
+	initImmediate: false,
+};
+
+export const translate = (key, interpolation) =>
+  t(key, interpolation);
