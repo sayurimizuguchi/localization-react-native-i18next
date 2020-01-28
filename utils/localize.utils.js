@@ -1,8 +1,4 @@
-import i18next from 'i18next';
-import { useTranslation } from 'react-i18next';
-
 import { en, pt } from '../localize-keys';
-
 
 const resources = { en, pt };
 
@@ -14,15 +10,16 @@ export const languageDetector = {
   cacheUserLanguage: () => {},
 };
 
-
 export const i18nextOptions = {
 	fallbackLng: 'en',
-	debug: true,
-	resources,
 	whitelist: Object.keys(resources),
-	nonExplicitWhitelist: true,
-	load: 'languageOnly',
+	debug: true,
+	ns: 'translation',
+	preload: true,
+	resources,
 	initImmediate: false,
+	load: 'languageOnly',
+  nonExplicitWhitelist: true,
 };
 
 export const translate = (key, interpolation) =>
