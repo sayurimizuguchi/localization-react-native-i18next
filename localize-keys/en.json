@@ -1,6 +1,7 @@
-{ "translation": {
-	"appName": "Localize example",
-	"hello": "Hello world",
-	"change": "change language"
-}
+{
+	"translation": {
+		"appName": "Localize example",
+		"hello": "Hello world",
+		"change": "change language"
+	}
 }
