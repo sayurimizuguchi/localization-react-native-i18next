@@ -1,26 +1,19 @@
 import React from 'react';
-import { Text, View, StyleSheet } from 'react-native';
-import { useTranslation } from 'react-i18next';
+import { Text } from 'react-native';
+
+import { translate } from '../utils/localize.utils';
 
 type Props = {
 	keyText: String,
+	interpolation: Object,
+	style: Object
 };
 
-export const TextComponent = ({ keyText, ...rest }: Props) => {
-	const { t } = useTranslation();
-
-	return (
-		<View>
-			<Text style={textStyle.text} {...rest}>
-				{t(keyText)}
-			</Text>
-		</View>
-	)
-}
-
-const textStyle = StyleSheet.create({
-  text: {
-		fontSize: 20,
-		marginBottom: 20
-  },
-});
+export const LocaleText = ({ keyText, interpolation = {}, style, ...rest }: Props) => {
+	let textContent = translate(keyText, interpolation).trim();
+  return (
+      <Text {...style} {...rest}>
+				{textContent}
+      </Text>
+  );
+};
