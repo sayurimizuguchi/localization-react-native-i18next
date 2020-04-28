@@ -2,6 +2,18 @@
 	"translation": {
 		"appName": "Exemplo Localize",
 		"hello": "Ola mundo",
-		"change": "Mudar idioma"
+		"change": "Mudar idioma",
+		"navigationBar": {
+			"home": "Inicio",
+			"profile": "Perfil"
+		},
+		"homeScene": {
+			"title": "Pagina inicial",
+			"head": "Ola mundo!"
+		},
+		"profile": {
+			"title": "Meu Perfil",
+			"name": "Sayuri Mizuguchi"
+		}
 	}
 }
