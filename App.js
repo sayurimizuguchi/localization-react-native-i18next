@@ -1,30 +1,21 @@
+import 'react-native-gesture-handler';
 import React from 'react';
-import { View, StyleSheet, TouchableOpacity } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
-import { TextComponent } from './components/text.component';
+import { translate } from './utils/localize.utils';
+import { Home } from './scenes/homeScreen';
+import { Profile } from './scenes/profileScreen';
 
-const App = () => {
-  return (
-    <View style={appStyle.rootView}>
-      <TextComponent keyText={'appName'} />
-			<TouchableOpacity title={'change'}>
-			  <TextComponent keyText={'hello'} style={appStyle.helloView} />
-			</TouchableOpacity>
-    </View>
-  );
-}
+const Tab = createBottomTabNavigator();
 
-const appStyle = StyleSheet.create({
-  rootView: {
-		flex: 1,
-		justifyContent: 'center',
-		alignItems: 'center'
-	},
-	helloView: {
-		justifyContent: 'center',
-		alignItems: 'center',
-		color: 'purple',
-  },
-});
+const App = () => (
+  <NavigationContainer>
+    <Tab.Navigator>
+      <Tab.Screen name={translate('navigationBar.home')} component={Home} />
+      <Tab.Screen name={translate('navigationBar.profile')} component={Profile} />
+    </Tab.Navigator>
+  </NavigationContainer>
+);
 
 export default App;

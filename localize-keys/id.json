@@ -1,0 +1,19 @@
+{
+	"translation": {
+		"appName": "Bahasa",
+		"hello": "Bahasa",
+		"change": "Bahasa",
+		"navigationBar": {
+			"home": "Bahasa",
+			"profile": "Profil"
+		},
+		"homeScene": {
+			"title": "Bahasa",
+			"head": "Ola mundo!"
+		},
+		"profile": {
+			"title": "Profil",
+			"name": "Sayuri Mizuguchi"
+		}
+	}
+}
