@@ -2,18 +2,17 @@
 	"translation": {
 		"appName": "Exemplo Localize",
 		"hello": "Ola mundo",
-		"change": "Mudar idioma",
-		"navigationBar": {
-			"home": "Inicio",
-			"profile": "Perfil"
+		"change": "Clicado {{ count }}x",
+		"languageSettings": "CONFIGURACAO DE IDIOMA",
+		"interpolationExample": "Alguem mudou o idioma {{count}}x",
+		"please": "HAHA! Decida logo seu idioma de uma vez",
+		"language": {
+			"en": "en",
+			"pt": "pt"
 		},
-		"homeScene": {
-			"title": "Pagina inicial",
+		"settingsScene": {
+			"title": "Configuracoes",
 			"head": "Ola mundo!"
-		},
-		"profile": {
-			"title": "Meu Perfil",
-			"name": "Sayuri Mizuguchi"
 		}
 	}
 }
