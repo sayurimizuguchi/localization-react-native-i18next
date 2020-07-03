@@ -1,20 +1,22 @@
+/* eslint-disable react/jsx-props-no-spreading */
 import 'react-native-gesture-handler';
 import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { createStackNavigator } from '@react-navigation/stack';
 
-import { translate } from './utils/localize.utils';
-import { Home } from './scenes/homeScreen';
-import { Profile } from './scenes/profileScreen';
+import { Home } from './src/scenes/homeScreen';
 
-const Tab = createBottomTabNavigator();
+const Stack = createStackNavigator();
 
 const App = () => (
   <NavigationContainer>
-    <Tab.Navigator>
-      <Tab.Screen name={translate('navigationBar.home')} component={Home} />
-      <Tab.Screen name={translate('navigationBar.profile')} component={Profile} />
-    </Tab.Navigator>
+    <Stack.Navigator
+      screenOptions={{
+        headerShown: false,
+      }}
+    >
+      <Stack.Screen name="Home" component={Home} />
+    </Stack.Navigator>
   </NavigationContainer>
 );
 

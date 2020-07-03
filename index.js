@@ -5,7 +5,7 @@ import i18nextReactNative from 'i18next-react-native-language-detector';
 
 import App from './App';
 import { name as appName } from './app.json';
-import { i18nextOptions } from './utils/localize.utils';
+import { i18nextOptions } from './src/services/localization/localize.utils';
 
 // identifying language when opening the app
 i18next

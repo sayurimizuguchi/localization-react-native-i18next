@@ -2,14 +2,13 @@
 	"translation": {
 		"appName": "Localize example",
 		"hello": "Hello world",
-		"change": "change language",
-		"navigationBar": {
-			"home": "Home",
-			"profile": "Profile"
-		},
-		"homeScene": {
-			"title": "Home",
-			"head": "You have 1 notification."
+		"change": "cliked {{ count }}x",
+		"languageSettings": "LANGUAGE SETTINGS",
+		"interpolationExample": "Someone switched the language {{count}}x",
+		"please": "LOL! Please decide your language for once",
+		"languages": {
+			"en": "en",
+			"pt": "pt"
 		},
 		"profileScene": {
 			"title": "My Profile",
