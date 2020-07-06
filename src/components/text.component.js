@@ -14,7 +14,7 @@ export const LocaleText = ({
 }: Props) => {
   const textContent = translate(keyText, interpolation).trim();
   return (
-    <Text style={{...style}} {...rest}>
+    <Text style={{ ...style }} {...rest}>
       {textContent}
     </Text>
   );
