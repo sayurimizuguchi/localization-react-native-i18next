@@ -21,6 +21,13 @@ export const i18nextOptions = {
 };
 
 /**
+ * @param {string} language format required to convert e.g en_US
+ * @return {string} format recognized by i18next e.g en-US
+ * ISO language code table http://www.lingoes.net/en/translator/langcode.htm
+ */
+export const i18nextLanguageFormat = (language) => (language ? language.replace(/_/, '-') : '');
+
+/**
  * Translates the key that is passed in as per interpolation for dymanic values
  * @param {string} key String that contains the key of the object to translate
  * @param {Object} interpolation dynamic object to translate
