@@ -1,14 +1,23 @@
-import { NativeModules } from 'react-native';
+import { NativeModules, Platform } from 'react-native';
 
-const { RNI18n } = NativeModules;
-const locale = (RNI18n) ? RNI18n.locale.replace(/_/, '-') : '';
+import { i18nextLanguageFormat } from '../localization/localize.utils';
 
 /**
- * returns the language setted on user's phone
+ * use NativeModules to get devide languages
+ * both iOS and Android, default format is language_Country e.g en_US
+ * @return {string} language
+ */
+const deviceLanguage = Platform.OS === 'ios'
+  ? NativeModules.SettingsManager.settings.AppleLocale
+  : NativeModules.I18nManager.localeIdentifier;
+
+/**
+ * Language setted on user's phone
+ * @return {string} language in ISO format recognized for most i18n libraries e.g en-US
  */
 export const userPhoneLanguage = {
   init: Function.prototype,
   type: 'languageDetector',
-  detect: () => locale,
+  detect: () => i18nextLanguageFormat(deviceLanguage),
   cacheUserLanguage: Function.prototype,
 };
