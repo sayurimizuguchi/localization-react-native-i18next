@@ -1,8 +1,8 @@
 import i18next from 'i18next';
 
-import { en, pt } from '../../../localize-keys';
+import { en, pt, ur } from '../../../localize-keys';
 
-export const resources = { en, pt };
+export const resources = { en, pt, ur };
 
 /**
  * i18next initalization parameters
