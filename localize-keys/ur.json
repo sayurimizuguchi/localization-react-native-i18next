@@ -1,0 +1,19 @@
+{
+	"translation": {
+		"appName": "NANANAANA",
+		"hello": "Hello bANANA",
+		"change": "cliked {{ count }}x",
+		"languageSettings": "LANGUAGE ULULULULU",
+		"interpolationExample": "Someone switched the language {{count}}x",
+		"please": "LOL! Please decide your language for once",
+		"languages": {
+			"en": "en",
+			"pt": "pt",
+			"ur": "ur"
+		},
+		"profileScene": {
+			"title": "My Profile",
+			"name": "Sayuri Mizuguchi"
+		}
+	}
+}

@@ -21,3 +21,6 @@ export const userPhoneLanguage = {
   detect: () => i18nextLanguageFormat(deviceLanguage),
   cacheUserLanguage: Function.prototype,
 };
+
+
+export const soma = (param1, param2) => param1 + param2;

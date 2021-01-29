@@ -19,7 +19,6 @@ export const Home = () => {
   return (
     <View style={{ flex: 1, paddingHorizontal: 20 }}>
       <LocaleText keyText="languageSettings" style={home.languageSettings} />
-
       {Object.keys(resources).map((item) => (
         <View key={item}>
           <TouchableOpacity
