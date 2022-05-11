@@ -4,8 +4,7 @@ React Native Multi Language Starter kit - Support multiple languages for mobiles
 
 - No need for native implementation for each platform (iOS and Android)
 - Centralize your entire localization multi-language logic using React Native & i18next
-
-<img src="https://drive.google.com//uc?export=view&id=1eENjeFWMByQpjBBTrrpd0TkDWKf3HXqF" width="250">
+<img src="https://drive.google.com/uc?export=view&id=1eENjeFWMByQpjBBTrrpd0TkDWKf3HXqF" width="250">
 
 ## Requirements: 
 - Node installed
